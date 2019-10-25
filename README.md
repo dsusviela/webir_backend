@@ -24,5 +24,5 @@ Please refer all your concerns about the `scrapy_service` to [the original repo]
 So far the project only counts with 2 endpoints.
 
 1. `GET /postgraduates/show` returns a json with all the info gathered by the spiders
-2. `GETH /postgraduates/` returns a friendly reminder (html) where to get the desired json.
+2. `GET /postgraduates/` returns a friendly reminder (html) where to get the desired json.
 
