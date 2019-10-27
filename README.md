@@ -1,6 +1,6 @@
 # Postgraduates backend service
 
-Welcome to the postgraduates backend service. This is a `django` project. To install `django` for a unix filesystem just run `pip3 install django`. If youre on a windows machine and dont have [wsl](https://docs.microsoft.com/en-us/windows/wsl/install-win10) then refer to [django documentation](https://docs.djangoproject.com/en/2.2/howto/windows/).
+Welcome to the postgraduates backend service. This is a `django` project. To install `django` for a unix filesystem just run `pip3 install django`. If youre on a windows machine and dont have [wsl](https://docs.microsoft.com/en-us/windows/wsl/install-win10) then refer to [django documentation](https://docs.djangoproject.com/en/2.2/howto/windows/). Also, you must install [the following app thorugh pip](https://github.com/adamchainz/django-cors-headers), you can do so with `pip3 install django-cors-headers`.
 
 ## Running the server
 
