@@ -27,6 +27,12 @@ class OrtSpider(scrapy.Spider):
         career_image_url = image_url if image_url != None else ""
        
         with open('./postgraduates_backend/scrapy_service/postgrados/spiders/careers.json', mode='r+', encoding='utf-8') as json_file:
+            area_map = {
+                "Master en Ingeniería (por Investigación)": "Investigación",
+                "Master en Big Data": "Computación",
+                "Diploma de Especialización en Inteligencia Artificial": "Computación",
+                "Diploma de Especialización en Analítica de Big Data": "Computación",
+            }
             careers = json.load(json_file)
 
             new_career = {
@@ -34,11 +40,12 @@ class OrtSpider(scrapy.Spider):
                 'description': career_description,
                 'url': career_url,
                 'image_url': career_image_url,
-                'university': "ort"
+                'university': "ort",
+                'area': area_map[career_name]
             }
 
             careers['careers'].append(new_career)
 
             json_file.seek(0)
             json.dump(careers, json_file, ensure_ascii=False)
-            
+

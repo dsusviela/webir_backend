@@ -1,6 +1,5 @@
 import scrapy
 import json
-import os
 
 class UmSpider(scrapy.Spider):
     name = "um"
@@ -24,6 +23,7 @@ class UmSpider(scrapy.Spider):
         url = response.request.url
         career_url = url if url != None else ""
         # career_image_url = response.xpath('//div[@id="content-picture"]/img/@src').get() 
+
         with open('./postgraduates_backend/scrapy_service/postgrados/spiders/careers.json', mode='r+', encoding='utf-8') as json_file:
             careers = json.load(json_file)
 
